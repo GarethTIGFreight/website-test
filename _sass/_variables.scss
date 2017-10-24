@@ -1,0 +1,31 @@
+//
+// Bulma Colours
+//
+
+$primary:      #895597 !default;
+
+// $orange:       hsl(14,  100%, 53%) !default;
+// $yellow:       hsl(48,  100%, 67%) !default;
+$green:        #1c4b9a !default;
+// $turquoise:    hsl(171, 100%, 41%) !default;
+$blue:         #1c4b9a !default;
+$purple:       #895597 !default;
+// $red:          hsl(348, 100%, 61%) !default;
+
+//
+// Variables
+//
+$body-bg: #000;
+
+//
+// Navbar
+//
+$navbar-background-color: transparent !default;
+$navbar-height: 5rem !default;
+
+$navbar-item-color: $white !default;
+$navbar-item-hover-color: $grey-light !default;
+$navbar-item-hover-background-color: transparent !default;
+$navbar-item-active-color: $grey-light !default;
+$navbar-item-active-background-color: $grey-darker !default;
+$navbar-item-img-max-height: 4rem !default;
