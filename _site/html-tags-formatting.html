@@ -13,34 +13,34 @@
         <link rel="stylesheet" href="/assets/css/prism.css" />
     </head>
     <body>
-        <nav class="tig-menu navbar">
+        <nav class="tig-menu navbar is-dark">
     <div class="tig-menu__container container">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">
                 <img src="/assets/images/logo-top-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
             </a>
-            <div class="navbar-burger burger" data-target="navMenubd-main">
+            <div class="navbar-burger burger" data-target="burger-target">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-        <div id="navMenubd-main" class="navbar-menu">
-
+        <div id="burger-target" class="navbar-menu navbar-menu--main">
             <div class="navbar-end">
                 <a class="navbar-item " href="http://tigfreight.com">
                 </a>
 
+                <!-- Desktop Mega Menu -->
                 <div class="navbar-item has-dropdown is-hoverable is-hidden-touch is-mega">
                     <a class="navbar-link" href="/documentation/overview/start/">
                         Solutions
                     </a>
                     <div class="navbar-dropdown">
                         <div class="container is-fluid">
-                         <div class="columns">
+                            <div class="columns">
                                 <div class="column">
                                     <h1 class="title is-6 is-mega-menu-title">Industry</h1>
-                                    <a class="navbar-item" href="...">
+                                    <a class="navbar-item" href="/industry/e-commerce">
                                         <div class="navbar-content">
                                             E-Commerce
                                         </div>
@@ -125,6 +125,7 @@
                     </div>
                 </div>
 
+                <!-- Touch Mega Menu -->
                 <div class="navbar-item has-dropdown is-hoverable is-hidden-desktop">
                     <a class="navbar-link " href="/documentation/overview/start/">
                         Solutions
@@ -145,26 +146,31 @@
                     </div>
                 </div>
         
-            <a class="navbar-item " href="http://tigfreight.com">
-                Partners
-            </a>
-            <a class="navbar-item " href="http://tigfreight.com">
-                Blog
-            </a>
-            <a class="navbar-item " href="http://tigfreight.com">
-                Careers
-            </a>
-            <a class="navbar-item " href="http://tigfreight.com">
-                Contact
-            </a>
-            <div class="navbar-item">
-                <div class="field is-grouped">
-                    <p class="control">
-                        <a class="button is-outlined is-light" href="....">
-                            Get Started
-                        </a>
-                    </p>
+                <!-- Normal Mega Menu items -->
+                <a class="navbar-item " href="http://tigfreight.com">
+                    Partners
+                </a>
+                <a class="navbar-item " href="http://tigfreight.com">
+                    Blog
+                </a>
+                <a class="navbar-item " href="http://tigfreight.com">
+                    Careers
+                </a>
+                <a class="navbar-item " href="http://tigfreight.com">
+                    Contact
+                </a>
+
+                <!-- Call to acion header button -->
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="button is-outlined is-light" href="....">
+                                Get Started
+                            </a>
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -1,7 +1,176 @@
 ---
 ---
-// Imports
+/*
+* Application SCSS
+* 
+* This file is constructed with a combination of css naming conventions.
+* As we're using Bulma when applying modifiers to Bulma classes like .containter
+* I'd use something like is-modifier
+*
+* When building my own custom componenets I adhere to BEM naming convention
+*
+* Author: Gareth Somers
+* Date: October 2017
+* Company: TIG Freight
+*/
+
+//
+// Imports (relative to /_sass/ for some reason)
+//
 @import 'bulma/utilities/initial-variables';
 @import 'variables';
 @import 'bulma';
 @import 'font-awesome/font-awesome';
+
+$tig-padding: 80px;
+
+// 
+// Post Card
+//
+.post-card {
+    .post-title {
+        font-size: 1.6em;
+    }
+    .post-categories {
+        margin-bottom: 5px;
+    }
+}
+
+//
+// Bulma - Helpers
+//
+
+// Thin Containers
+.container.is-thin
+{
+    max-width:960px;
+}
+// Vertically Centered Columns
+.columns.has-columns-vertically-centered
+{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+// On Tablet upwards
+@include tablet
+{
+    .is-overhanging
+    {
+        margin-right: -65%;
+        max-width:165%;
+    }
+    .column.is-extra-padded-right
+    {
+        padding-right:$tig-padding;
+    }
+}
+
+
+//
+// Bulma - Custom
+//
+// On Tablet upwards
+@include tablet
+{
+    .section.is-split
+    {
+        border-top:1px solid $grey-lighter;
+        border-bottom:1px solid $grey-lighter;
+        .container.is-fluid
+        {
+            margin:0px;
+        }
+    }
+}
+@include desktop
+{
+    .columns.is-split-columns > .column
+    {
+        padding:$tig-padding !important;
+        &:first-child
+        {
+            border-right: 1px solid $grey-lighter;
+            padding-left: calc( 50vw - #{ ($desktop / 2) - ($gap / 2) } ) !important;
+        }
+        &:last-child
+        {
+            padding-right: calc( 50vw - #{ ($desktop / 2) - ($gap / 2) } ) !important;
+        }
+    }
+}
+@include widescreen
+{
+    .section.is-split .columns.is-split-columns > .column:first-child { padding-left: calc( 50vw - #{ ($widescreen / 2) - ($gap / 2) } ) !important; }
+    .section.is-split .columns.is-split-columns > .column:last-child { padding-right: calc( 50vw - #{ ($widescreen / 2) - ($gap / 2) } ) !important; }
+}
+@include fullhd
+{
+    .section.is-split .columns.is-split-columns > .column:first-child { padding-left: calc( 50vw - #{ ($fullhd / 2) - ($gap / 2) } ) !important; }
+    .section.is-split .columns.is-split-columns > .column:last-child { padding-right: calc( 50vw - #{ ($fullhd / 2) - ($gap / 2) } ) !important; }
+}
+
+
+//
+// Header
+//
+.tig-menu
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:100;
+    width:100%;
+    transition: background-color $speed $easing;
+}
+body.is-not-scrolled
+{
+    .tig-menu
+    {
+        background-color:rgba(0,0,0,0);
+    }
+}
+
+//
+// Fake Menu 
+// This appears underneath the main menu to push it down (as it's position is static)
+//
+.tig-fake-menu
+{
+    position:relative;
+    z-index:5;
+    height:52px;
+}
+
+//
+// Heros
+//
+.tig-hero
+{
+    background-image:url("/assets/images/hero.jpg");
+    background-size:cover;
+    background-position:center center;
+    color:white;
+    position: relative;
+    &:before
+    {
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.5);
+        display:block;
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+//
+// Content
+//
+.content .heading:first-child + h2:not(:first-child)
+{
+    margin-top:5px;
+}
