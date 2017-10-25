@@ -1,20 +1,11 @@
 ---
 layout: default
 ---
-<section class="hero is-primary">
-    <div class="hero-body">
-        <div class="container is-fluid">
-            <h1 class="title">
-                Blog Kategorileri
-            </h1>
-            <h2 class="subtitle">
-                Kategorilendirilmiş makaleleri inceleyin.
-            </h2>
-        </div>
-    </div>
-</section>
+{% include header.html %}
+{% include hero-small.html %}
+
 <section class="section">
-    <div class="container is-fluid">
+    <div class="container">
         <aside class="menu">
             {% for category in site.categories %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -30,3 +21,5 @@ layout: default
         </aside>
     </div>
 </section>
+
+{% include footer.html %}

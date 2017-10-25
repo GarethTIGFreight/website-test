@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+      public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
@@ -19,6 +19,8 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-bower (1.1.2)
+      jekyll (~> 3.2)
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
     jekyll-gist (1.4.1)
@@ -59,9 +61,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 3.5.2)
+  jekyll-bower
   jekyll-feed (~> 0.6)
   jekyll-gist
   jekyll-paginate (~> 1.1.0)
 
 BUNDLED WITH
-   1.15.3
+   1.16.0.pre.3

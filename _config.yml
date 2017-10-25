@@ -5,13 +5,14 @@ permalink: pretty
 sass:
   style: compressed
 paginate: 5
-paginate_path: "/:num/"
+paginate_path: "/blog/page:num/"
 markdown: kramdown
 
 plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
+  - jekyll-bower
 
 exclude:
   - Gemfile

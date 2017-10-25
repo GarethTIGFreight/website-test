@@ -1,0 +1,40 @@
+$large-column-gap: $column-gap * 2;
+.columns.is-large > .column
+{
+    padding: $large-column-gap;
+}
+
+.columns.is-large
+{
+    margin-left: (-$large-column-gap);
+    margin-right: (-$large-column-gap);
+    margin-top: (-$large-column-gap);
+    &:last-child
+    {
+        margin-bottom: (-$large-column-gap);
+    }
+    &:not(:last-child)
+    {
+        margin-bottom: calc(1.5rem - #{$large-column-gap});
+    }
+}
+
+$small-column-gap: $column-gap / 2;
+.columns.is-small > .column
+{
+    padding: $small-column-gap;
+}
+.columns.is-small
+{
+    margin-left: (-$small-column-gap);
+    margin-right: (-$small-column-gap);
+    margin-top: (-$small-column-gap);
+    &:last-child
+    {
+        margin-bottom: (-$small-column-gap);
+    }
+    &:not(:last-child)
+    {
+        margin-bottom: calc(1.5rem - #{$small-column-gap});
+    }
+}

@@ -21,8 +21,8 @@
 @import 'variables';
 @import 'bulma';
 @import 'font-awesome/font-awesome';
-
-$tig-padding: 80px;
+@import 'spacing';
+@import 'tig-columns';
 
 // 
 // Post Card
@@ -36,6 +36,32 @@ $tig-padding: 80px;
     }
 }
 
+
+//
+// Responsive Iframes
+//
+.intrinsic-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+    padding-bottom: 56.25%;
+}
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+    padding-bottom: 75%;
+}
+.intrinsic-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 //
 // Bulma - Helpers
 //
@@ -46,7 +72,14 @@ $tig-padding: 80px;
     max-width:960px;
 }
 // Vertically Centered Columns
-.columns.has-columns-vertically-centered
+.columns.has-columns-at-end
+{
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+}
+// Vertically Centered Columns
+.columns.has-columns-at-center
 {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -56,64 +89,78 @@ $tig-padding: 80px;
 // On Tablet upwards
 @include tablet
 {
-    .is-overhanging
+    .is-overhanging-left
+    {
+        margin-left: -65%;
+        max-width:165%;
+    }
+    .is-overhanging-right
     {
         margin-right: -65%;
         max-width:165%;
     }
-    .column.is-extra-padded-right
+    .is-overhanging-bottom
     {
-        padding-right:$tig-padding;
+        margin-bottom: -6rem;
     }
 }
 
 
 //
-// Bulma - Custom
+// Bulma - is Boxed
 //
-// On Tablet upwards
 @include tablet
 {
-    .section.is-split
+    .section.has-boxed-columns
     {
+        padding: $large-column-gap $large-column-gap;
         border-top:1px solid $grey-lighter;
         border-bottom:1px solid $grey-lighter;
-        .container.is-fluid
-        {
-            margin:0px;
-        }
     }
-}
-@include desktop
-{
-    .columns.is-split-columns > .column
+    .columns.is-boxed > .column:not(:last-child)
     {
-        padding:$tig-padding !important;
-        &:first-child
-        {
-            border-right: 1px solid $grey-lighter;
-            padding-left: calc( 50vw - #{ ($desktop / 2) - ($gap / 2) } ) !important;
-        }
-        &:last-child
-        {
-            padding-right: calc( 50vw - #{ ($desktop / 2) - ($gap / 2) } ) !important;
-        }
+        border-right: 1px solid $grey-lighter;
     }
 }
-@include widescreen
-{
-    .section.is-split .columns.is-split-columns > .column:first-child { padding-left: calc( 50vw - #{ ($widescreen / 2) - ($gap / 2) } ) !important; }
-    .section.is-split .columns.is-split-columns > .column:last-child { padding-right: calc( 50vw - #{ ($widescreen / 2) - ($gap / 2) } ) !important; }
-}
-@include fullhd
-{
-    .section.is-split .columns.is-split-columns > .column:first-child { padding-left: calc( 50vw - #{ ($fullhd / 2) - ($gap / 2) } ) !important; }
-    .section.is-split .columns.is-split-columns > .column:last-child { padding-right: calc( 50vw - #{ ($fullhd / 2) - ($gap / 2) } ) !important; }
-}
-
 
 //
-// Header
+// Bulma - Is Bordered
+//
+.section.is-bordered-top,
+.section.is-bordered
+{
+    border-top:1px solid $grey-lighter;
+}
+.section.is-bordered-bottom,
+.section.is-bordered
+{
+    border-bottom:1px solid $grey-lighter;
+}
+
+//
+// Bulma - Has Text Shadow
+//
+.hero.has-text-shadow
+{
+    text-shadow: 2px 2px #ff0000;
+    // Colors
+    @each $name, $pair in $colors
+    {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+        &.is-#{$name}
+        {
+            text-shadow: 1px 1px rgba($color, 0.3);
+            .button
+            {
+                text-shadow: none;
+            }
+        }
+    }
+}
+
+//
+// Header - Tig Menu
 //
 .tig-menu
 {
@@ -123,6 +170,12 @@ $tig-padding: 80px;
     z-index:100;
     width:100%;
     transition: background-color $speed $easing;
+    .navbar-brand .navbar-item img
+    {
+        width:auto;
+        height:auto;
+        max-height:2.5rem;
+    }
 }
 body.is-not-scrolled
 {
@@ -133,24 +186,25 @@ body.is-not-scrolled
 }
 
 //
-// Fake Menu 
+// Header - Fake Menu 
 // This appears underneath the main menu to push it down (as it's position is static)
 //
 .tig-fake-menu
 {
     position:relative;
     z-index:5;
-    height:52px;
+    height:80px;
 }
 
 //
-// Heros
+// Heros - Tig Hero
 //
 .tig-hero
 {
     background-image:url("/assets/images/hero.jpg");
     background-size:cover;
-    background-position:center center;
+    background-position:center bottom;
+    background-attachment: fixed;
     color:white;
     position: relative;
     &:before

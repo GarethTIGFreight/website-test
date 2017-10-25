@@ -1,0 +1,15 @@
+<div class="column {{ include.columnClass | default: 'is-6' }}">
+    <div class="columns">
+        <div class="column is-narrow">
+            <span class="icon is-large">
+                <i class="fa fa-3x fa-{{ include.icon | default: 'home' }}"></i>
+            </span>
+        </div>
+        <div class="column">
+            <div class="content">
+                <h3 class="has-text-info">{{ include.title | default: "Default value"}}</h3>
+                <p>{{ include.description | default: "Default value" }}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,27 +1,61 @@
 ---
 layout: default
 ---
-{% include header.html transparent_menu=true %}
-<!-- Hero -->
-<section class="tig-hero hero is-fullheight is-dark">
-    <div class="hero-body">
-        <div class="container is-thin">
-            <h1 class="tig-hero__text title is-size-3 has-text-weight-light">
-                Lack of innovation and poor customer service <br />
-                are the top ranked business issues with freight providers, <br />
-                find out why TIG is different.
-            </h1>
-            <p class="tig-hero__description is-size-7">Source: 2017 EFT Global Logistics Report</p>
-            <p>&nbsp;</p>
-            <a class="tig-hero__button button is-dark" href="#why">
-                Find Out Why
-            </a>
+{% include header.html %}
+{% include hero-small.html title="E-Commerce" description="Description of the E-Commerce Page" %}
+
+
+<!-- Intro Text -->
+<section class="section is-white p-t-xxl p-b-xxl">
+    <div class="container is-thin">
+        <div class="has-text-centered">
+            <p class="title is-size-4">How does it actually work?</p>
+            <p>
+                Spacial has both a web app and an android app to make your website easy and always available.<br />It offers you all the designs in collaboration with some smart people. Your projects will look great everywhere you go.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- 2 Column - Image to the right -->
+<section class="section is-white is-bordered">
+    <div class="container is-thin">
+        <div class="columns is-large has-columns-at-center">
+            <div class="column is-6">
+                <div class="content">
+                    <div class="heading">Example content shown in a heading</div>
+                    <h2 class="title is-size-5">Access to your freight on the go</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis. Suspendisse sit amet magna lorem. Nulla commodo molestie augue sit amet blandit.
+                    </p>
+                    <p>
+                        Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros. Maecenas sodales maximus bibendum. Ut vestibulum eleifend mauris ac imperdiet. Praesent bibendum placerat semper. Morbi aliquet odio a vehicula posuere.
+                    </p>
+                </div>
+            </div>
+            <div class="column is-6">
+                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-right is-block">
+            </div>
         </div>
     </div>
 </section>
 
 
-<!-- Truested by -->
+<!-- Services - With Icons -->
+<section class="section is-white is-medium is-bordered-bottom">
+    <div class="container is-thin">
+        <div class="columns is-multiline">
+            {% include service-with-icon.html icon="home" title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service-with-icon.html icon="pencil" title="Duis sodales malesuada erat" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis." %}
+            {% include service-with-icon.html icon="plus" title="Suspendisse sagittis posuere interdum" description="Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros." %}
+            {% include service-with-icon.html icon="home" title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service-with-icon.html icon="pencil" title="Duis sodales malesuada erat" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis." %}
+            {% include service-with-icon.html icon="plus" title="Suspendisse sagittis posuere interdum" description="Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros." %}
+        </div>
+    </div>
+</section>
+
+<!-- Quote / Emote -->
 <section class="section is-white is-medium">
     <div class="container">
         <div class="has-text-centered">
@@ -35,13 +69,17 @@ layout: default
 </section>
 
 
-<section class="section is-white">
+<!-- 2 Column - Image to the left -->
+<section class="section is-white is-bordered">
     <div class="container is-thin">
-        <div class="columns has-columns-vertically-centered">
-            <div class="column is-5">
+        <div class="columns is-large has-columns-at-center">
+            <div class="column is-6">
+                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-left is-block">
+            </div>
+            <div class="column is-6">
                 <div class="content">
                     <div class="heading">Example content shown in a heading</div>
-                    <h2 class="is-size-5">Access to your freight on the go</h2>
+                    <h2 class="title is-size-5">Access to your freight on the go</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis. Suspendisse sit amet magna lorem. Nulla commodo molestie augue sit amet blandit.
                     </p>
@@ -49,41 +87,92 @@ layout: default
                         Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros. Maecenas sodales maximus bibendum. Ut vestibulum eleifend mauris ac imperdiet. Praesent bibendum placerat semper. Morbi aliquet odio a vehicula posuere.
                     </p>
                 </div>
-            </div>
-            <div class="column is-1 is-tablet"><!-- Spacer --></div>
-            <div class="column is-6">
-                <img src="https://placeimg.com/783/481/tech" class="is-overhanging">
             </div>
         </div>
     </div>
 </section>
 
-<section class="section is-white is-paddingless is-split">
-    <div class="container is-fluid">
-        <div class="columns is-gapless is-split-columns">
-            <div class="column ">
-                <div class="content">
-                    <p>
-                        <span class="icon"><i class="fa fa-home"></i></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis. Suspendisse sit amet magna lorem. Nulla commodo molestie augue sit amet blandit.
-                    </p>
-                    <p>
-                        <span class="icon"><i class="fa fa-home"></i></span> Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros. Maecenas sodales maximus bibendum. Ut vestibulum eleifend mauris ac imperdiet. Praesent bibendum placerat semper. Morbi aliquet odio a vehicula posuere.
-                    </p>
-                    <p>
-                        <span class="icon"><i class="fa fa-home"></i></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis. Suspendisse sit amet magna lorem. Nulla commodo molestie augue sit amet blandit.
-                    </p>
+<!-- Services - No Icons -->
+<section class="section is-white is-small">
+    <div class="container is-thin">
+        <div class="columns is-multiline">
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+            {% include service.html title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+        </div>
+    </div>
+</section>
+
+
+<!-- 2 Column Artys -->
+<section class="section is-white ">
+    <div class="container is-thin">
+        <div class="columns is-large has-columns-at-end">
+            <div class="column has-text-right">
+                <p><img src="https://placeimg.com/424/500/tech"></p>
+            </div>
+            <div class="column has-text-left">
+                <p class="heading">Example content shown in a heading</p>
+                <h2 class="subtitle">
+                    We're not a startup, not an aggregator, a carrier, or a broker. We're a full-service freight solutions provider.
+                </h2>
+                <p><img src="https://placeimg.com/424/300/tech"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Boxed Panels -->
+<section class="section is-light is-bold has-boxed-columns">
+    <div class="container is-thin">
+        <div class="columns is-large is-boxed">
+
+            <!-- Left Column -->
+            <div class="column">
+                <div class="columns is-multiline">
+                    {% include service-with-icon.html columnClass='is-12' icon="home" title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+                    {% include service-with-icon.html columnClass='is-12' icon="pencil" title="Duis sodales malesuada erat" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis." %}
                 </div>
             </div>
+
+            <!-- Right Column -->
             <div class="column">
                 <div class="content">
                     <div class="heading">SYNC YOUR CONTACTS NOW</div>
-                    <h2 class="is-size-5">Powerful dashboard that lets you control your site and portfolio.</h2>
+                    <h2 class="title is-size-5">Powerful dashboard that lets you control your site and portfolio.</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis. Suspendisse sit amet magna lorem. Nulla commodo molestie augue sit amet blandit.
                     </p>
                     <p>
                         Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros. Maecenas sodales maximus bibendum. Ut vestibulum eleifend mauris ac imperdiet. Praesent bibendum placerat semper. Morbi aliquet odio a vehicula posuere.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- We Work With -->
+<section class="hero is-dark is-bold">
+    <div class="hero-body">
+        <div class="container is-thin">
+            <div class="has-text-centered">
+                <p class="heading m-b-xl">USED AND TRUSTED BY THESE GUYS</p>
+                <div class="columns is-mobile is-small is-multiline">
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
+                    <div class="column is-6-mobile is-3"><img src="https://placeimg.com/150/100/arch/grayscale"></div>
                 </div>
             </div>
         </div>

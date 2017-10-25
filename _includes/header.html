@@ -2,7 +2,7 @@
     <div class="tig-menu__container container">
         <div class="navbar-brand">
             <a href="{{ "/" | prepend: site.baseurl }}" class="navbar-item">
-                <img src="{{ASSET_PATH}}/assets/images/logo-top-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+                <img src="{{ASSET_PATH}}/assets/images/logo-top-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="300" height="100">
             </a>
             <div class="navbar-burger burger" data-target="burger-target">
                 <span></span>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="column">
                                     <h1 class="title is-6 is-mega-menu-title">Platforms</h1>
-                                    <a class="navbar-item" href="...">
+                                    <a class="navbar-item" href="/platforms/openfreight/">
                                         <div class="navbar-content">
                                             <span class="icon"><i class="fa fa-paper-plane-o"></i></span> OpenFreight®
                                         </div>
@@ -160,6 +160,3 @@
         </div>
     </div>
 </nav>
-{% if include.transparent_menu == false %}
-    <div class="tig-fake-menu">{{ include.transparent_menu }}</div>
-{% endif %}
