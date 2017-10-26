@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- name: image
+  label: Image
+  type: boolean
+  hidden: false
+  default: true
