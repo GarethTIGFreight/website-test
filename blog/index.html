@@ -6,31 +6,92 @@ title: My Blog
 {% include header.html %}
 {% include hero-small.html title="Blog" description="Description of the blog category" %}
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
-{% endfor %}
+<section class="section">
+    <div class="container is-thin">
+        <div class="columns">
+            <!-- Left Column -->
+            <div class="column is-4">
+                <div class="columns is-multiline">
+                    {% include service.html columnClass="is-12" title="Learn from the best" description="Your personal growth is important to us, and we’ll give you everything you need to make it happen: learning budgets, mentorship opportunities." %}
+                    {% include service.html columnClass="is-12" title="Duis sodales malesuada erat" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales malesuada erat, quis mattis leo euismod quis." %}
+                    {% include service.html columnClass="is-12" title="Suspendisse sagittis posuere interdum" description="Phasellus facilisis ante nec tempus pulvinar. Suspendisse sagittis posuere interdum. Integer a sem rhoncus, viverra ante non, imperdiet eros." %}
+                </div>
+            </div>
+            <!-- Right Column -->
+            <div class="column is-8">
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
+                <!-- The posts -->
+                {% for post in paginator.posts %}
+                    <div class="card m-b-md">
+                        {% if post.thumbnail %}
+                        <div class="card-image">
+                            <figure class="image">
+                                <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
+                                        <img src="{{ post.thumbnail | prepend: site.baseurl }}" alt="{{ post.title }}">
+                                </a>
+                            </figure>
+                        </div>
+                        {% endif %}
+
+
+                        <!-- Card Content -->
+                        <div class="card-content">
+
+                            <!-- Title area -->
+                            <a class="media" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
+                                <div class="media-content">
+                                    <p class="title is-4">{{ post.title }}</p>
+                                </div>
+                            </a>
+
+                            <div class="content">
+                                {{ post.excerpt }}
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <time datetime="{{ post.date | date: "%Y/%m/%d" }}">{{ post.date | date_to_long_string }}</time>
+                                </div>
+                                <div class="column has-text-right">
+                                    {% for category in post.categories %}
+                                    <a href="/{{ category | prepend: site.baseurl }}" class="tag {% if site.data.category[category].color %} is-{{ site.data.category[category].color }} {% endif %}">{{ category }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <!-- Pagination -->
+                <nav class="pagination is-centered">
+
+
+
+                    {% if paginator.previous_page %}
+                        <a href="{{ paginator.previous_page_path }}" class="pagination-previous">Previous</a>
+                    {% else %}
+                        <span class="pagination-previous">Previous</span>
+                    {% endif %}
+
+
+                    {% if paginator.next_page %}
+                        <a href="{{ paginator.next_page_path }}" class="pagination-next">Next</a>
+                    {% else %}
+                        <span class="pagination-next">Next</span>
+                    {% endif %}
+
+
+                    <ul class="pagination-list">
+                        {% for page in (1..paginator.total_pages) %}
+                        <li>
+                            <a {% if page == paginator.page %}{% else %} href="{% if page == 1 %}../{% else %}{% if paginator.page != 1 %}../{% endif %}page{{ page }}{% endif %}" {% endif %} class="pagination-link {% if page == paginator.page %} is-current {% endif %}">{{ page }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 {% include header.html %}
