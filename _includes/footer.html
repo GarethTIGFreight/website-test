@@ -86,11 +86,11 @@
                         Send us a message and we'll get back to you
                     </h2>
                     
-                    <form action="thanks" method="POST">
+                    <form action="http://formspree.io/gareth.somers@tigfreight.com.au" method="POST">
                         <input type="hidden" name="message-type" value="enquiry">
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input class="input" type="email" placeholder="Name">
+                                <input class="input" type="text" placeholder="Name" name="name">
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-user"></i>
                                 </span>
@@ -98,18 +98,17 @@
                         </div>
                         <div class="field">
                             <p class="control has-icons-left">
-                                <input class="input" type="email" placeholder="Email">
+                                <input class="input" type="email" placeholder="Email" required name="email">
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-envelope"></i>
                                 </span>
                             </p>
                         </div>
                         <div class="field">
-                            <p class="control has-icons-left has-icons-right">
-                                <textarea class="textarea" placeholder="Your Enquiry"></textarea>
+                            <p class="control has-icons-left has-icons-right" required>
+                                <textarea class="textarea" placeholder="Your Enquiry" name="message"></textarea>
                             </p>
                         </div>
-                        <p class="invalid-text is-hidden">Please fill in all fields</p>
                         <div class="field is-grouped is-grouped-right">
                             <p class="control">
                                 <button class="button" type="submit"><span>Send Message</span></button>
