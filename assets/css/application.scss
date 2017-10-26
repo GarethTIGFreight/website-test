@@ -86,7 +86,9 @@
     align-items: center;
 }
 
-// On Tablet upwards
+//
+// Overhanging - Left and Right
+//
 @include tablet
 {
     .is-overhanging-left
@@ -99,12 +101,43 @@
         margin-right: -65%;
         max-width:165%;
     }
-    .is-overhanging-bottom
-    {
-        margin-bottom: -6rem;
-    }
 }
 
+
+//
+// Overhanging - Bottom
+//
+@include tablet
+{
+      // Hero - Is Small - 1.5rem
+    .hero.is-small.has-overhanging-bottom {
+        margin-bottom: 0.75rem;
+        .hero-body .is-overhanging-bottom {
+            margin-bottom: -2.25rem;
+        }
+    }
+      // Hero - Is Medium - 9rem
+    .hero.is-medium.has-overhanging-bottom {
+        margin-bottom: 4.5rem;
+        .hero-body .is-overhanging-bottom {
+             margin-bottom: -13.5rem;
+        }
+    }
+      // Hero - Is Large - 18rem
+    .hero.is-large.has-overhanging-bottom {
+        margin-bottom: 9rem;
+        .hero-body .is-overhanging-bottom {
+            margin-bottom: -27rem;
+        }
+    }
+      // Hero - Is Small - 3rem
+    .hero.has-overhanging-bottom {
+        margin-bottom: 1.5rem;
+        .hero-body .is-overhanging-bottom {
+            margin-bottom: -4.5rem;
+        }
+    }
+}
 
 //
 // Bulma - is Boxed
@@ -126,13 +159,13 @@
 //
 // Bulma - Is Bordered
 //
-.section.is-bordered-top,
-.section.is-bordered
+.is-bordered-top,
+.is-bordered
 {
     border-top:1px solid $grey-lighter;
 }
-.section.is-bordered-bottom,
-.section.is-bordered
+.is-bordered-bottom,
+.is-bordered
 {
     border-bottom:1px solid $grey-lighter;
 }
@@ -219,6 +252,7 @@ body.is-not-scrolled
         left: 0px;
     }
 }
+
 
 
 //

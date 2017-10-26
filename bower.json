@@ -1,0 +1,21 @@
+{
+  "name": "tigfreight-website",
+  "description": "JS and CSS dependencies for tigfreight-website",
+  "main": "assets/js/main.js",
+  "authors": [
+    "Gareth Somers"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "aos": "^2.2.0"
+  }
+}

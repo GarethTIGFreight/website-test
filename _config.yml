@@ -12,7 +12,6 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-gist
-  - jekyll-bower
 
 exclude:
   - Gemfile
@@ -21,6 +20,7 @@ exclude:
   - LICENSE
   - CNAME
   - vendor
+  - bower_components
 
 defaults:
 - scope:
