@@ -1,12 +1,12 @@
 ---
-title: Welcome to Jekyll!
+title: This a test to see what happens to GIT once I save this
 date: 2017-02-02 00:00:00 Z
 permalink: welcome-to-jekyll.html
 categories:
 - Jekyll
-layout: post
 description: Description of the post.
 comments: true
+layout: post
 ---
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
