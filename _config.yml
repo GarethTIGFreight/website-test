@@ -1,29 +1,36 @@
+---
+title: Website Test
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: assets/img
+  values:
+    image: true
 name: Jekyll Bulma
-description: "Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers"
-baseurl: ""
+description: Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers
+baseurl: ''
 permalink: pretty
 sass:
   style: compressed
 paginate: 5
 paginate_path: "/blog/page:num/"
 markdown: kramdown
-
 plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-gist
-
+- jekyll-paginate
+- jekyll-feed
+- jekyll-gist
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENSE
-  - CNAME
-  - vendor
-  - bower_components
-
-defaults:
-- scope:
-    path: "assets/img"
-  values:
-    image: true
+- Gemfile
+- Gemfile.lock
+- README.md
+- LICENSE
+- CNAME
+- vendor
+- bower_components

@@ -1,11 +1,12 @@
 ---
-layout: post
 title: Markup - Post with Images
-description: Displaying images in posts
-categories:
-    - Markup
-comments: true
+date: 2017-02-02 00:00:00 Z
 permalink: post-with-images.html
+categories:
+- Markup
+layout: post
+description: Displaying images in posts
+comments: true
 ---
 
 Here are some examples of what a post with images might look like. You should add `image` class to `<img>` tag.

@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Markup - HTML Tags and Formatting
-categories:
-    - Markup
-comments: true
+date: 2017-02-02 00:00:00 Z
 permalink: html-tags-formatting.html
+categories:
+- Markup
+layout: post
+comments: true
 ---
 
 A variety of common markup showing how the theme styles them.

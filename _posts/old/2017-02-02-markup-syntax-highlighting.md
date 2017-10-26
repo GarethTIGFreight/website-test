@@ -1,12 +1,13 @@
 ---
-layout: post
 title: Markup - Syntax Highlighting
-description: Testing syntax highlighting on Jekyll Bulma theme.
-categories:
-    - Markup
-thumbnail: /assets/images/posts/syntax.jpg
-comments: true
+date: 2017-02-02 00:00:00 Z
 permalink: syntax-highlighting.html
+categories:
+- Markup
+layout: post
+description: Testing syntax highlighting on Jekyll Bulma theme.
+thumbnail: "/assets/images/posts/syntax.jpg"
+comments: true
 ---
 
 Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.
