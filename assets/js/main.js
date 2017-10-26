@@ -9,6 +9,14 @@
 *
 */
 
+// Initiate AOS
+AOS.init({
+    offset: 250,
+    duration: 800,
+    easing: 'ease',
+    delay: 0,
+});
+
 /**
  * Get Documents Scroll Top
  *

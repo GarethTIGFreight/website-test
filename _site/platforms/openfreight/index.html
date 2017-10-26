@@ -10,7 +10,6 @@
         <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml" />
 
         <link rel="stylesheet" href="/assets/css/application.css" />
-        <link rel="stylesheet" href="/assets/css/prism.css" />
     </head>
     <body>
         <nav class="tig-menu navbar is-dark">
@@ -176,24 +175,27 @@
     </div>
 </nav>
 <!-- Hero -->
-<section class="tig-hero hero is-medium is-info has-overhanging-bottom is-bold">
+<section class="tig-hero hero is-medium is-info has-overhanging-bottom is-bold has-large-columns">
     <div class="hero-body">
         <div class="tig-fake-menu"></div>
         <div class="container is-thin">
-            <div class="columns is-large">
+            <div class="columns has-columns-at-center is-large">
                 <div class="column is-7">
                     <h1 class="tig-hero__text title is-size-3 has-text-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non egestas lacus, vitae sollicitudin velit.</h1>
                     <div class="content">
                         <p class="tig-hero__description is-size-5">Sed eu urna quis dui pellentesque tempor ut sed nulla. Sed pellentesque dui at odio suscipit ultrices. Donec tempor efficitur ligula, at lobortis neque tempus eu. Sed sed vehicula dolor, ac rhoncus odio.</p>
-                        <p><a class="tig-hero__button button is-large is-info" href="#find-out-more">
+                    </div>
+                    <div class="buttons">
+                        <a class="tig-hero__button button is-large is-info" href="#find-out-more">
                             Find Out More
-                        </a>&nbsp;&nbsp;<a class="tig-hero__button button is-large is-light is-outlined" href="/contact/">
+                        </a>
+                        <a class="tig-hero__button button is-large is-light is-outlined" href="/contact/">
                             Contact Us Now
-                        </a></p>
+                        </a>
                     </div>
                 </div>
-                <div class="column is-hidden-mobile">
-                    <img src="/assets/images/tig/mockup-iphone6.png" class="is-overhanging-bottom is-block">  
+                <div class="column is-hidden-mobile" data-aos="fade-up">
+                    <img src="/assets/images/tig/mockup-iphone6.png" class="is-overhanging-bottom is-block" data-aos="fade_left">  
                 </div>
             </div>
         </div>
@@ -214,7 +216,7 @@
 </section>
 
 <!-- 2 Column - Image to the right -->
-<section class="section is-white is-bordered">
+<section class="section is-white is-bordered has-large-columns">
     <div class="container is-thin">
         <div class="columns is-large has-columns-at-center">
             <div class="column is-6">
@@ -230,7 +232,7 @@
                 </div>
             </div>
             <div class="column is-6">
-                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-right is-block">
+                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-right is-block" data-aos="fade-left">
             </div>
         </div>
     </div>
@@ -350,11 +352,11 @@
 
 
 <!-- 2 Column - Image to the left -->
-<section class="section is-white is-bordered">
+<section class="section is-white is-bordered has-large-columns">
     <div class="container is-thin">
         <div class="columns is-large has-columns-at-center">
             <div class="column is-6">
-                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-left is-block">
+                <img src="https://placeimg.com/783/481/tech" class="is-overhanging-left is-block" data-aos="fade-right">
             </div>
             <div class="column is-6">
                 <div class="content">
@@ -418,7 +420,7 @@
 
 
 <!-- 2 Column Artys -->
-<section class="section is-white ">
+<section class="section is-white has-large-columns">
     <div class="container is-thin">
         <div class="columns is-large has-columns-at-end">
             <div class="column has-text-right">
@@ -438,7 +440,7 @@
 
 
 <!-- Boxed Panels -->
-<section class="section is-light is-bold has-boxed-columns">
+<section class="section is-light is-bold has-boxed-columns has-large-columns">
     <div class="container is-thin">
         <div class="columns is-large is-boxed">
 
@@ -653,7 +655,7 @@
 </footer>
 
 
-<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/aos.js"></script>
 <script src="/assets/js/main.js"></script>
 
 <!--
