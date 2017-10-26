@@ -1,6 +1,6 @@
 ---
 title: This a test to see what happens to GIT once I save this
-date: 2017-04-05 01:00:00 +1000
+date: 2017-04-04 15:00:00 Z
 permalink: welcome-to-jekyll.html
 categories:
 - Jekyll
@@ -8,7 +8,6 @@ description: Description of the post.
 comments: true
 layout: post
 ---
-
 
 You’ll find this post in your `_posts` directory.
 
