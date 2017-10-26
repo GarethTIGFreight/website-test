@@ -1,6 +1,6 @@
 ---
 title: This a test to see what happens to GIT once I save this
-date: 2017-02-02 00:00:00 Z
+date: 2017-02-04 00:00:00 Z
 permalink: welcome-to-jekyll.html
 categories:
 - Jekyll
